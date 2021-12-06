@@ -1,0 +1,23 @@
+.content1 {
+    @extend %section2;
+    background-image: url('img/cnt1.jpg');
+    @extend %section_height;
+
+
+.container {
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    // align-items: flex-end;
+    // flex-direction: column;
+    justify-content: flex-end;
+    @include tablet {
+       justify-content: center;
+    }
+}
+
+&__description {
+    @extend %content;
+}
+
+
+}

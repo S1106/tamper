@@ -1,0 +1,26 @@
+.footer {
+    background: {
+        color: $indigo;
+    }
+    color: $white;
+
+.container {
+    justify-content: space-between;
+    @include tablet {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+&__description {
+    justify-content: flex-end;
+}
+
+.button {   
+    margin-top: 0;
+    @include tablet {
+        margin-top: 40px;
+    }
+}
+
+}

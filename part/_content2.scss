@@ -1,0 +1,24 @@
+.content2 {
+    @extend %section2;
+    background-image: url('img/cnt2.jpg');
+    @extend %section_height;
+
+
+
+    .container {
+        letter-spacing: 0.1em;
+        line-height: 1.5em;
+        justify-content: flex-end;
+
+        @include tablet {
+            justify-content: center;
+        }
+    }
+
+
+    &__description {
+        @extend %content;
+    }
+
+
+}

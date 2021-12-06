@@ -1,0 +1,33 @@
+.contacts {
+    @extend %section1;
+    @extend %section_height;
+
+
+.container {
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    justify-content: space-between;
+
+    @include phone {
+        flex-direction: column;
+    }
+}
+
+&__text {
+    flex-basis: 40%;
+    padding: 25px;
+    &:nth-child(1) {
+        flex-grow: 10;
+    }
+
+    &:nth-child(2) {
+        flex-grow: 1;
+    }
+
+    @include tablet {
+        flex-basis: 50%;
+    }
+
+}
+
+}

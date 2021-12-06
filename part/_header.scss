@@ -1,0 +1,75 @@
+.header {
+    background-image: linear-gradient(to right, $bordo, $indigo);
+    color: $white;
+    @extend %section_height;
+
+    // @include media(768px){
+    //     min-height: 100%;
+    // }
+    @include tablet {
+        min-height: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        font-weight: normal;
+        letter-spacing: 0.1em;
+        line-height: 1.5em;
+
+        @include tablet {
+            text-align:center;
+
+        }
+    }
+
+    &__text {
+        border-bottom: 1px solid $white;
+        display: flex;
+        font-size: 1rem;
+        justify-content: space-between;
+        padding-bottom: 50px;
+
+        @include tablet {
+            flex-direction: column;
+            border-bottom: none;
+        }
+    }
+
+    &__description {
+        padding-top: 50px;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+
+        @include tablet {
+            width: 100%;
+            border-top: 1px solid $white;
+            margin-top: 40px;
+            justify-content: space-evenly;
+        }
+        @include phone {
+            display: none;
+        }
+        a {
+            &::after {
+                content: '';
+                display: block;
+                height: 0;
+                border-bottom: 0.5px solid $white;
+                transform: scaleX(0);
+                transition: transform 500ms linear;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+            }
+
+        }
+    }
+
+
+
+}
